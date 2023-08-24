@@ -1,23 +1,32 @@
-let res = [];
+let resA = [];
+let resB = [];
 
-function divisores(n){
- 
-  res.push(n);
+function divisores(n, n2){
+
+  let x,x2;
+  
+  resA.push(n);
+  resB.push(n2);
   //console.log(res);
  
   if(n == 1){
-    return res;
+    //console.log(resA, resB);
+    return true;
   } else {
-
-  //aca esta para ver el menor y mayor resultado, nose como implementarlos los 2 al mismo tiempo por ahora estekeeeee
-  for(let i = n; i >= 0; i--){
-  //for(let i = 2; i <= n; i++){
+  
+  for(let i = 2; i <= n; i++){
     if(isPrime(i) && (n / i) % 1 === 0){
-      let x = n/i
-      return divisores(x)
+      x = n/i
     }
   }
+
+  for(let i = n; i >= 0; i--){
+    if(isPrime(i) && (n / i) % 1 === 0){
+      x2 = n/i
+    }
  }
+    return divisores(x, x2)
+}
 }
 
 function isPrime(num){
@@ -27,6 +36,7 @@ function isPrime(num){
     return num > 1;
 }
 
-divisores(6);
-let sum = res.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-console.log(sum)
+divisores(6, 6);
+let sumA = resA.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+let sumB = resB.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(sumA, sumB)
