@@ -7,7 +7,8 @@ function binarySearch(arr0,n){
 
   if(arr[median] === n){
     return true;
-    
+  }else if(arr.length === 1){
+    return false
   } else if(arr[median] > n){
     //izquierda
     let newArrLeft = arr.slice(0, median)
