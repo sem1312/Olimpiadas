@@ -1,6 +1,6 @@
 # Olimpiadas
 
-js: todos menos divisores 2 (funciona con 6 pero no 1000)
+js: todos menos comodines 
 
 c++: desafios 0 y 1
 
