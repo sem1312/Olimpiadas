@@ -1,6 +1,6 @@
 # Olimpiadas
 
-js: todos menos comodines 
+js: todos menos comodines y reinas
 
 c++: desafios 0 y 1
 
